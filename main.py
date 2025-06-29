@@ -1,8 +1,8 @@
 from PySide6.QtWidgets import QApplication
-from PySide6.QtCore import QCoreApplication, QThread
-from main_window import MainWindow
-from app_logic import ScoreLogic
-from tts_manager import TTSManager
+from PySide6.QtCore import QCoreApplication
+from ui.main_window import MainWindow
+from core.score_logic import ScoreLogic
+from services.tts_manager import TTSManager
 import sys
 import traceback
 import gc
