@@ -11,14 +11,14 @@ from PySide6.QtUiTools import QUiLoader
 from PySide6.QtCore import QFile, Qt, QFileInfo, QTimer, QUrl
 from PySide6.QtGui import QColor, QDoubleValidator, QIcon, QPixmap
 
-from widgets import DropZone
-from widgets import MultiClassPanel
-from app_logic import ScoreLogic
-from tts_manager import ITTSManager
+from ui.widgets import DropZone
+from ui.widgets import MultiClassPanel
+from core.score_logic import ScoreLogic
+from services.tts_manager import ITTSManager
 
 def resource_path(relative_path):
     # main.py가 있는 폴더 기준으로 절대경로 반환
-    base_path = os.path.dirname(os.path.abspath(__file__))
+    base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     if hasattr(sys, '_MEIPASS'):
         return os.path.join(sys._MEIPASS, relative_path)
     return os.path.join(base_path, relative_path)
